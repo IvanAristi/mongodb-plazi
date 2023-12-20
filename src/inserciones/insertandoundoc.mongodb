@@ -19,9 +19,26 @@ db.products.insertOne({
 */
 
 
-    //consulta todo
+    /*consulta todo
     db.products.find();
+*/
 
+
+    //generando el propio id
+    //si estan duplicados creara hasta que haya un error
+    db.products.insertOne({
+        _id: 1,
+        name: "product 1",
+        price: 1000
+        
+        })
+        
+        db.products.insertOne({
+            _id: 2,
+            name: "product 2",
+            price: 2000
+            
+            })
 
 
 

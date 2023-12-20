@@ -1,0 +1,35 @@
+//insertando varios documentos
+
+use("plazi_store")
+
+
+
+//elimina todo
+//db.products.drop()
+
+//cuando encuentra el duplicada deja de crear
+
+db.products.insertMany([
+
+    {
+        _id: 7,
+        name: "product 1"
+    },
+
+    {
+        _id: 6,
+        name: "product 1"
+    },
+
+    {
+        _id: 9,
+        name: "product 1"
+    }
+
+],
+//con ordered false: si hay un error de duplicidad lo salta y sigue creando
+{
+    ordered: false
+} )
+
+db.products.find()
