@@ -1,0 +1,49 @@
+
+use("plazi_store")
+
+/*
+db.products.insertMany([
+
+    {
+        _id: 10,
+        name: "product 10"
+    },
+
+    {
+        _id: 11,
+        name: "product 11"
+    },
+
+    {
+        
+        name: "product 12"
+    }
+
+],
+
+{
+    ordered: false
+} )
+*/
+
+//colocamos objectid y el id
+db.products.updateOne( 
+
+    { _id:  ObjectId("65834b4448a60295d6da561e") },
+   
+   {
+       
+      
+       $set: {
+           name: 'actualizando',
+           price: 5000
+   
+       }
+   }
+   )
+
+
+
+
+
+
