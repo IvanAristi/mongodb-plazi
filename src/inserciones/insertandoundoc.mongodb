@@ -1,0 +1,27 @@
+use ("plazi_store")
+
+
+/*inserto dos documentos y solo se queda con la 
+//ultima instrucccion
+//solo en la consulta vemos todos los datos
+
+db.products.insertOne({
+name: "product 1",
+price: 1000
+
+})
+
+db.products.insertOne({
+    name: "product 2",
+    price: 2000
+    
+    })
+*/
+
+
+    //consulta todo
+    db.products.find();
+
+
+
+
