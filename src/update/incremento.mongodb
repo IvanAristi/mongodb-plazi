@@ -1,0 +1,18 @@
+
+use("plazi_store")
+
+db.products.updateOne( 
+
+    { _id: 2 },
+   
+   {
+       
+      //incrementamos//
+      
+       $inc: {
+          
+           price: 100
+   
+       }
+   }
+   )

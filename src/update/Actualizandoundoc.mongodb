@@ -1,0 +1,27 @@
+// lo podemos hacer en mongo Atlas
+//ingresando a la base de datos desde la interfaz
+
+use("plazi_store")
+
+//db.products.find()
+
+//forma errada
+//db.products.updateOne( { _id: 2}, { name: 'actualizando'})
+
+//forma correcta//
+
+db.products.updateOne( 
+
+ { _id: 2 },
+
+{
+    //podemos agregar una sola actualizacion o varias
+   //incluso agregar mas atributos
+   
+    $set: {
+        name: 'actualizando',
+        price: 5000
+
+    }
+}
+)
