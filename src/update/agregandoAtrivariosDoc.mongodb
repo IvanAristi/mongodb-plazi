@@ -1,0 +1,35 @@
+use("sample_training");
+
+db.zips.find({city: "CLEVELAND"}).count()
+/*
+db.zips.updateMany (
+
+    //query
+ {city : "CLEVELAND"},
+
+ //actualizar operadores
+  { 
+    //cambiamos no el valor del atributo si no su nombre
+    $rename: {
+        nuevo: "cambie" }
+       
+       }
+
+)
+
+*/
+
+db.zips.updateMany (
+
+    //query
+ {city : "CLEVELAND"},
+
+ //eliminar a tributos de cumplan city "cleveland"
+  { 
+    //elimina el atributo
+    $unset : {
+        cambie: "cambie" }
+       
+       }
+
+)

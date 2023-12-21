@@ -10,7 +10,7 @@ db.zips.updateMany (
   //actualizar operadores
    { 
      $inc: {
-         pop }
+         pop: 1000 }
         
         }
 
