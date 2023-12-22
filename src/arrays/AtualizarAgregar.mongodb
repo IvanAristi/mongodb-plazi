@@ -1,0 +1,53 @@
+use("plazi_store");
+
+db.inventory.drop();
+
+db.inventory.insertMany([
+  {
+    _id: 1,
+    nombre: "Producto1",
+    categoria: "Electrónica",
+    precio: 50,
+    cantidad: 100,
+    disponible: true,
+    tags: ["tecnología", "oferta"],
+  },
+  {
+    _id: 2,
+    nombre: "Producto2",
+    categoria: "Ropa",
+    precio: 30,
+    cantidad: 50,
+    disponible: false,
+    tags: ["moda", "descuento"],
+  },
+  {
+    _id: 3,
+    nombre: "Producto3",
+    categoria: "Hogar",
+    precio: 80,
+    cantidad: 75,
+    disponible: true,
+    tags: ["decoración"],
+  },
+  {
+    _id: 4,
+    nombre: "Producto4",
+    categoria: "Electrónica",
+    precio: 120,
+    cantidad: 30,
+    disponible: false,
+    tags: ["tecnología", "premium"],
+  },
+  {
+    _id: 5,
+    nombre: "Producto5",
+    categoria: "Ropa",
+    precio: 40,
+    cantidad: 60,
+    disponible: true,
+    tags: ["moda"],
+  },
+]);
+
+db.inventory.find();

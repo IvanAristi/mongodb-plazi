@@ -1,0 +1,36 @@
+use("plazi_store")
+
+ db.inventory.updateOne({ _id: 4},{
+
+   
+    //solo funciona para arrays
+   //agrega al array
+    $push:{
+    tags: "agregandoalarray"
+}
+
+ })
+
+
+ db.inventory.updateMany({}, {
+    //solo funciona para arrays
+    //quita elementos de un array
+$pull: {
+    tags: "premiun"
+}
+
+ })
+
+ db.inventory.updateMany({}, {
+    //solo funciona para arrays
+    //quita varios  elementos de un array
+$pull: {
+    tags: {
+        $in: ["agregandoalarray","descuento"],
+
+}
+}
+ })
+
+
+
